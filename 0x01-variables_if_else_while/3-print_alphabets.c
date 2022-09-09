@@ -1,4 +1,3 @@
-25 lines (23 sloc)  287 Bytes
 #include <stdio.h>
 /**
  * main - Prints the alphabet in lowercase, then in uppercase.
@@ -9,7 +8,6 @@ int main(void)
 {
 	char c = 'a';
 	char d = 'A';
-
 while (c <= 'z')
 	{
 		putchar(c);
