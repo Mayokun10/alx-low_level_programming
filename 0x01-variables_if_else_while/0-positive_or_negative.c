@@ -1,15 +1,29 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
-int main() {
-    double num;
-    printf("Enter a number: ");
-    scanf("%lf", &num);
-    if (num <= 0.0) {
-        if (num == 0.0)
-            printf("You entered 0.");
-        else
-            printf("You entered a negative number.");
-    } 
-    else
-        printf("You entered a positive number.");
-    return 0;
+/**
+ * main - Determine if a random number is positive, negative or zero.
+(*
+ * Return: 0 on success
+ */
+int main(void)
+{
+	int n;
+
+        srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
+	if (n < 0)
+	{
+		printf("%d is %s\n", n, "negative");
+	}
+	else if (n > 0)
+	{
+		printf("%d is %s\n", n, "positive");
+	}
+	else
+	{
+		printf("%d is %s\n", n, "zero");
+	}
+	return (0);
 }
