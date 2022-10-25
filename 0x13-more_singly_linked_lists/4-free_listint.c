@@ -1,18 +1,19 @@
 #include "lists.h"
+
 /**
- * free_listint - this function frees a list
- * @head: the pointer to the struct
- *
- * Return: the number of elements
+ * free_listint - function that frees a listint_t list
+ * @head: Pointer of structure listint_t for beginning
+ * Return: Void
  */
+
 void free_listint(listint_t *head)
 {
-	listint_t *fr;
+	listint_t *temp;
 
 	while (head != NULL)
 	{
-		fr = head;
-		head = fr->next;
-		free(fr);
+		temp = head;
+		head = head->next;
+		free(temp);
 	}
 }
